@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(baxter_demo_museum)
+project(baxter_cube)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS
-  roscpp
+find_package(catkin REQUIRED
+  COMPONENTS
   baxter_core_msgs
   #baxter_interface
   #baxter_description
@@ -22,7 +22,7 @@ find_package(catkin REQUIRED COMPONENTS
   moveit_ros_planning
   moveit_ros_planning_interface
   tf
-)
+  )
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -102,7 +102,7 @@ endif(VISP_FOUND)
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES baxter_demo
-#  CATKIN_DEPENDS roscpp
+CATKIN_DEPENDS roscpp
 #  DEPENDS system_lib
 )
 
